@@ -5,11 +5,20 @@ function addHistory(questionText, timeTaken, errorCount) {
   newRow.classList.add("card");
 
   newRow.innerHTML = `
-  <h3>${questionText}</h3>
-  <div>
-  <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-  <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+  
+
+  <div class="container text-center">
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols">
+    <div class="col">
+    <h3>${questionText}</h3>
+    <div>
+    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    </div>
+    </div>
+    
   </div>
+</div>
   `;
 
   histories.appendChild(newRow);
