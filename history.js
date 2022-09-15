@@ -22,7 +22,7 @@ function addHistory(questionText, timeTaken, errorCount) {
 }
 
 function displayHistory() {
-  histories.innerHTML = "";
+  histories.textContent = " ";
   const previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
 
   previousTests.forEach((test) => {
@@ -36,5 +36,6 @@ function displayHistory() {
   `;
 
     histories.appendChild(newRow);
+    
   });
 }
